@@ -8,3 +8,135 @@
     max-width: 143px;
     margin: 0 auto;
 }
+.switch-field {
+    display: flex;
+    margin-bottom: 36px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	background-color: none;
+	color: #6F6E73;
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	transition: all 0.1s ease-in-out;
+    line-height: 18px;
+    border: 1px solid transparent
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #FCFCFC;
+	box-shadow: none;
+    border: 1px solid #BEBEC2;
+}
+
+.switch-field label:first-of-type {
+	border-radius: 10px;
+
+}
+
+.switch-field label:last-of-type {
+	border-radius: 10px;
+}
+.LoginForm{
+    margin: 20px 0 0 0;
+}
+.formInput input{
+    border: none;
+    background: #FCFCFC;
+    width: 306px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #BEBEC2;
+}
+.formInput{
+    text-align: center;
+}
+.formInput input::placeholder{
+    color: #828282;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.formInput input:focus{
+    outline: none;
+}
+.formbtn{
+    max-width: 162px;
+    margin: 27px auto 0;
+    text-align: center;
+}
+.formbtn button{
+    background-color: #BEBEC2;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 10px 14px 24px;
+}
+.formbtn button i{
+    padding: 0 6px;
+}
+.termdata{
+    text-align: center;
+    max-width: 298px;
+    margin: 0 auto;
+}
+.termdata p{
+    color: #6F6E73;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 24px 0 0 0;
+}
+.formbtnextra button{
+    background-color: #414047;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 17px 14px 24px;
+}
+.formbtnextra{
+    max-width: 240px;
+    margin: 14px auto 0;
+    text-align: center;
+}
+.formbtnextra button i{
+    padding: 0 8px;
+}
+.nearloginMain p{
+    color: #414047;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 15px 0 0 0;
+
+}
+.nearloginMain{
+    border-top: 1px solid #DFDFE0;
+    margin: 22px 0 0 0;
+}
+
+
