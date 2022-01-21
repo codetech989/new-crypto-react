@@ -6,6 +6,7 @@ import HomeLogo from '../../../img/HomeLogo.png'
 interface LoginProps {
 
 }
+
 export const Login: FC<LoginProps> = (props) => {
     return (
         <>
