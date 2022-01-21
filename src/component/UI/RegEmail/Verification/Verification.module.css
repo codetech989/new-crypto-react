@@ -1,0 +1,17 @@
+.HeadMain{
+    background-color: #E5E5E5;
+    padding: 17px 0;
+}
+.headBg{
+    max-width: 27%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+.TopParagraph{
+    font-size:14px;
+    line-height:24px;
+    text-align: center;
+    width:40%;
+    margin: 0 auto;
+}
