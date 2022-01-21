@@ -78,13 +78,31 @@
 .formInput input:focus{
     outline: none;
 }
+.formbtn2{
+    max-width: 162px;
+    margin: 27px auto 0;
+    text-align: center;
+}
+.formbtn2 button{
+    background-color: #BEBEC2;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 10px 14px 24px;
+}
+.formbtn2 button i{
+    padding: 0 6px;
+}
 .formbtn{
     max-width: 162px;
     margin: 27px auto 0;
     text-align: center;
 }
 .formbtn button{
-    background-color: #BEBEC2;
+    background-color: #885FFF;
     font-size: 16px;
     line-height: 22px;
     font-weight: 600;
