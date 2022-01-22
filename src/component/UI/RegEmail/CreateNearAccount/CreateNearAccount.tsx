@@ -1,19 +1,24 @@
 import React from 'react';
 import {Card} from '../../Card/Card';
 import styles from './CreateNearAccount.module.css';
+import Close from '../../../img/close.png';
+import Vector from '../../../img/Vector.png';
 
 export const CreateNear: React.VFC = () => {
     return (<>
             <header>
-                    <div className={styles.HeadMain}>
+            <div className={styles.HeadMainData}>
                         <div className={styles.headBg}>
-                            <p>Create NEAR account</p>
+                            <p>Verification</p>
                         </div>
-                </div>
+                        <div className={styles.headCancel}>
+                            <img  src={Close} />
+                        </div>
+                    </div>
 
             </header>
             <Card>
-                <div className="group-4-0-6">
+                {/* <div className="group-4-0-6">
                     <div className="top-illustration">
                         <div className="illustrationbg"/>
                     </div>
@@ -78,6 +83,40 @@ export const CreateNear: React.VFC = () => {
                         </div>
                     </div>
                     <div className="rectangle-2-0-9"/>
+                </div> */}
+
+                <div className={styles.CreateNear}>
+                    <div className={styles.CreateNearMain}>
+                        <p>Enter an Account ID to use with your NEAR account. Your Account ID will be used for all NEAR operations, including sending and receiving assets.
+
+                        </p>
+                        <form>
+                            <div className={styles.FormInput1}>
+                                <label>Full Name</label>
+                                <input type="text" placeholder='Ex. John doe' />
+                            </div>
+                            <div className={styles.FormInput2}>
+                                <label>Account ID<img src={Vector} /></label>
+                                <input type="text" placeholder='yourname' />
+                                <button type='submit'>.near</button>
+                            </div>
+                            <div className={styles.formbtn}>
+                                <button type='submit'>Continue <i className="fas fa-chevron-right" /></button>
+                            </div>
+                        </form>
+                        <h4>By creating a NEAR account, you agree to the NEAR Wallet Terms of Service and Privacy Policy.
+</h4>
+                        <div className={styles.nearlogin}>
+                            <div className={styles.nearloginMain}>
+                                <p>Already have NEAR account?</p>
+                                <div className={`${styles.formbtnextra}`}>
+                                        <button type='submit'>Log in with NEAR <i className="fas fa-chevron-right" />
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </Card>
         </>
