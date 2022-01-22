@@ -4,6 +4,7 @@ import { CreateNear } from "./component/UI/RegEmail/CreateNearAccount/CreateNear
 import { Verification } from "./component/UI/RegEmail/Verification/Verification";
 import './App.css'
 import { BrowserRouter, Route,Routes } from "react-router-dom";
+
 function App() {
   return (
       <BrowserRouter>
