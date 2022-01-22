@@ -261,3 +261,148 @@
     width: 135px;
     background-color: #885eff;
 }
+.headCancel img{
+    margin: -10px 0 0 0;
+}
+.HeadMain{
+    background-color: #E5E5E5;
+    padding: 17px 0 10px 0px;
+}
+.headBg{
+    max-width: 10%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+.HeadMainData{
+    display: flex;
+    background: #F5F5F5;
+    padding: 18px 6px 0px 6px;
+}
+.FormInput2 label img{
+    width: 20px;
+    padding: 0 0px 0 3px;
+}
+.FormInput1 label,.FormInput2 label{
+    display: flex;
+    align-items: center;
+    max-width: 130px;
+    color: #6F6E73;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.CreateNearMain p{
+    color: #808080;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    width: 300px;
+    margin: 20px 0 18px 0;
+}
+.FormInput1 input{
+    border: 1px solid #BEBEC2;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px 20px;
+    height: 45px;
+    margin: 8px 0 0 0 ;
+}
+.FormInput2 input{
+    border: 1px solid #BEBEC2;
+    border-radius: 8px 0px 0px 8px;
+    width: 80%;
+    padding: 10px 20px;
+    height: 45px;
+    margin: 8px 0 0 0;
+}
+.FormInput1 {
+    margin: 28px 0 0 0;
+}
+.FormInput1{
+    margin: 10px 0 0 0;
+}
+.FormInput2{
+    margin: 9px 0 0 0;
+}
+.FormInput2 button{
+    background-color: #FCFCFC;
+    border: none;
+    border: 1px solid #BEBEC2;
+    padding: 10px 17px 11px 11px;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+}
+.nearloginMain p{
+    color: #414047;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 15px 0 0 0;
+    max-width: 200px;
+    margin: 15px auto 0;
+
+}
+.nearloginMain{
+    border-top: 1px solid #DFDFE0;
+    margin: 22px 0 0 0;
+}
+.formbtnextra{
+    max-width: 240px;
+    margin: 14px auto 0;
+    text-align: center;
+}
+.formbtnextra button{
+    background-color: #414047;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 17px 14px 24px;
+}
+.CreateNearMain h4{
+    color: #6F6E73;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 287px;
+    margin: 16px auto 0;
+}
+.formbtn{
+    max-width: 162px;
+    margin: 27px auto 0;
+    text-align: center;
+}
+.formbtn button{
+    background-color: #BEBEC2;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px 13px 24px;
+}
+.FormInput2 input:focus{
+    outline: none;
+}
+.FormInput1 input:focus{
+    outline: none;
+}
+.FormInput2 input ::placeholder{
+   color:#828282 ;
+   font-size: 16px;
+   line-height: 2px;
+   font-weight: 400;
+}
+.FormInput1 input ::placeholder{
+    color:#828282 ;
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: 400;
+ }
