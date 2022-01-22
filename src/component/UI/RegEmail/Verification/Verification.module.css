@@ -33,12 +33,12 @@
 
 }
 
-.formbtn{
+.formbtn2{
     max-width: 162px;
     margin: 27px auto 0;
     text-align: center;
 }
-.formbtn button{
+.formbtn2 button{
     background-color: #BEBEC2;
     font-size: 16px;
     line-height: 22px;
@@ -48,8 +48,23 @@
     border-radius: 10px;
     padding: 14px 10px 14px 24px;
 }
-.formbtn button i{
+.formbtn2 button i{
     padding: 0 6px;
+}
+.formbtn{
+    max-width: 162px;
+    margin: 27px auto 0;
+    text-align: center;
+}
+.formbtn button{
+    background-color: #885FFF;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 10px 14px 24px;
 }
 .formData h3{
     color: #808080;
@@ -79,4 +94,10 @@
 .FormBottom{
     border-top: 1px solid #E9E6E6;
     margin: 25px 0 0 0;
+}
+.verification_input{
+    margin: 22px;
+}
+.formData{
+    margin-bottom: 40px;
 }

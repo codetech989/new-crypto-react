@@ -4,12 +4,8 @@ import styles from './Login.module.css';
 import HomeLogo from '../../../img/HomeLogo.png';
 import { Link, useNavigate } from "react-router-dom"
 import {saveEmail, savePhone} from "../../../../store/Actions/loginAction";
-import {useDispatch} from "react-redux"
 import {useAppDispatch} from "../../../../hooks/hooks";
-
-interface LoginProps {
-
-}
+import {LoginProps} from '../../../../interfaces/interfaces'
 
 export const Login: FC<LoginProps> = (props) => {
     const dispatch = useAppDispatch()
@@ -56,8 +52,8 @@ export const Login: FC<LoginProps> = (props) => {
         setEmail(emailAddress);
     };
 
-    const [colors, setColors] = useState<string>("clicked")
-    const [newColors, setNewColors] = useState<string>("notClicked")
+    const [colors, setColors] = useState<string>("notClicked")
+    const [newColors, setNewColors] = useState<string>("clicked")
     return (
         <>
             <header>
@@ -102,10 +98,8 @@ export const Login: FC<LoginProps> = (props) => {
                             <div className={styles.nearloginMain}>
                                 <p>Already have NEAR account?</p>
                                 <div className={`${styles.formbtnextra}`}>
-                                    <Link to="/createnear">
-                                        <button onClick={() => push('/verification')}>Log in with NEAR <i className="fas fa-chevron-right" />
+                                        <button onClick={() => push('/createnear')}>Log in with NEAR <i className="fas fa-chevron-right" />
                                         </button>
-                                    </Link>
                                 </div>
                             </div>
                         </div>

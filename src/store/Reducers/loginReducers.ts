@@ -7,17 +7,15 @@ const initialState = {
 
 export const loginReducer = (state = initialState, action:any) => {
     switch (action.type) {
-        case actionTypes.ADD_EMAIL:
-            console.log(action)
+        case actionTypes.STORE_EMAIL:
             return {
                 ...state,
-
-                loginEmail: action.value
+                loginEmail: action.res,
             }
         case actionTypes.STORE_PHONE:
             return {
                 ...state,
-                // loginPhone:action
+                loginPhone:action.res,
             }
     }
     return state
