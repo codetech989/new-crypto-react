@@ -3,102 +3,70 @@ import {Card} from '../../Card/Card';
 import styles from './CreateNearAccount.module.css';
 import Close from '../../../img/close.png';
 import Vector from '../../../img/Vector.png';
-
-export const CreateNear: React.VFC = () => {
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+import { UserSubmitForm } from '../../../../interfaces/interfaces'
+import {useNavigate} from "react-router-dom";
+export const CreateNear: React.FC = () => {
+    const push = useNavigate()
+    const validationSchema = Yup.object().shape({
+        fullname: Yup.string().required('Fullname is required'),
+        username: Yup.string()
+            .required('Username is required')
+            .min(6, 'Username must be at least 6 characters')
+            .max(20, 'Username must not exceed 20 characters'),
+    });
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors }
+    } = useForm<UserSubmitForm>({
+        resolver: yupResolver(validationSchema)
+    });
+    const onSubmit = (data: UserSubmitForm) => {
+        console.log(JSON.stringify(data, null, 2));
+    };
     return (<>
             <header>
             <div className={styles.HeadMainData}>
                         <div className={styles.headBg}>
-                            <p>Verification</p>
+                            <p>Create NEAR account</p>
                         </div>
                         <div className={styles.headCancel}>
-                            <img  src={Close} />
+                            <img onClick={()=>push('/')} src={Close} />
                         </div>
                     </div>
 
             </header>
             <Card>
-                {/* <div className="group-4-0-6">
-                    <div className="top-illustration">
-                        <div className="illustrationbg"/>
-                    </div>
-                    <p className="text-1">Create NEAR account</p>
-                    <div className="close">
-                        <img src=""/>
-                    </div>
-                    <div className="group-4-0-5">
-                        <div className="group-4-0-2">
-                            <button className="primary-_button">
-                                <div className="layout">
-                                    <div className="padding"/>
-                                    <p className="text-3">Log in with NEAR</p>
-                                    <div className="padding"/>
-                                </div>
-                                <div className="icon-/-hide-chevron">
-                                    <img src=""/>
-                                </div>
-                            </button>
-                            <p className="text-5">Already have NEAR account?</p>
-                        </div>
-                        <div className="line-2-1"/>
-                    </div>
-                    <div className="group-2-0-2">
-                        <div className="group-2-7-1">
-                            <div className="group-3-4-3">
-                                <div className="input">
-                                    <p className="text-6">Full Name</p>
-                                    <div className="frame-1-7-1">
-                                        <p className="text-7">John doe</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="group-3-4-4">
-                                <div className="input">
-                                    <p className="text-8">Account ID</p>
-                                    <div className="frame-1-7-1">
-                                        <p className="text-9">johnd</p>
-                                    </div>
-                                    <p className="text-1-0">Account ID already taken!</p>
-                                </div>
-                                <div className="group-4-0-3">
-                                    <p className="text-1-1">.near</p>
-                                    <div className="line-2-2"/>
-                                </div>
-                                <img src=""/>
-                                <button className="primary-_button">
-                                    <div className="layout">
-                                        <div className="padding"/>
-                                        <p className="text-1-3">Continue</p>
-                                        <div className="padding"/>
-                                    </div>
-                                    <img src=""/>
-                                </button>
-                            </div>
-                            <p className="text-1-5">By creating a NEAR account, you agree to the NEAR Wallet Terms of
-                                Service and Privacy Policy.
-                            </p>
-                            <p className="text-1-6">Enter an Account ID to use with your NEAR account. Your Account ID
-                                will be used for all NEAR operations, including sending and receiving assets.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="rectangle-2-0-9"/>
-                </div> */}
-
                 <div className={styles.CreateNear}>
                     <div className={styles.CreateNearMain}>
                         <p>Enter an Account ID to use with your NEAR account. Your Account ID will be used for all NEAR operations, including sending and receiving assets.
 
                         </p>
-                        <form>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <div className={styles.FormInput1}>
                                 <label>Full Name</label>
-                                <input type="text" placeholder='Ex. John doe' />
+                                <input
+                                    type="text"
+                                    {...register('fullname')}
+                                    placeholder='Ex. John doe'
+                                    className={`form-control ${errors.fullname ? 'is-invalid' : ''}`}
+                                />
+                                <div className={styles["invalid-feedback"]}>{errors.fullname?.message}</div>
                             </div>
                             <div className={styles.FormInput2}>
                                 <label>Account ID<img src={Vector} /></label>
-                                <input type="text" placeholder='yourname' />
+                                <input
+                                    type="text"
+                                    {...register('username')}
+                                    placeholder='yourname'
+                                    className={`form-control ${errors.username ? 'is-invalid' : ''}`}
+                                />
                                 <button type='submit'>.near</button>
+                                <div className={styles["invalid-feedback"]}>{errors.username?.message}</div>
                             </div>
                             <div className={styles.formbtn}>
                                 <button type='submit'>Continue <i className="fas fa-chevron-right" /></button>
